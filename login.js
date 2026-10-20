@@ -5,7 +5,7 @@ let logado = false;
 
 for  (let tentativa = 1; tentativa <= maxtentativas; tentativa++) {
      let usuarioinput = prompt (`[tentativa ${tentativa} de ${maxtentativas}]  digite o usuario:`);
-     let senhainput = prompt (`[tentativa] $(tentativa) de ${maxtentativas}] digite a senhacorreta:`);
+     let senhainput = prompt (`[tentativa] $(tentativa) de ${maxtentativas}] digite a senha:`);
     
      if (usuarioinput) === usuariocorreto && senhainput === senhacorreta) {
         alert ("login efetuado com sucesso! Bem-vindo.");
