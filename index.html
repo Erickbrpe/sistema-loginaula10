@@ -1,37 +1,37 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Login</title>
 </head>
 <body>
+
 <script>
-    
 const usuariocorreto = "admin";
 const senhacorreta = "22";
-const maxtentativas = "3";
+const maxtentativas = 3;
 let logado = false;
 
-for  (let tentativa = 1; tentativa <= maxtentativas; tentativa++) {
-     let usuarioinput = prompt (`[tentativa ${tentativa} de ${maxtentativas}]  digite o usuario:`);
-     let senhainput = prompt (`[tentativa] $(tentativa) de ${maxtentativas}] digite a senha:`);
+for (let tentativa = 1; tentativa <= maxtentativas; tentativa++) {
+    let usuarioinput = prompt(`[tentativa ${tentativa} de ${maxtentativas}] digite o usuario:`);
+    let senhainput = prompt(`[tentativa ${tentativa} de ${maxtentativas}] digite a senha:`);
     
-     if (usuarioinput) === usuariocorreto && senhainput === senhacorreta) {
-        alert ("login efetuado com sucesso! Bem-vindo.");
+    if (usuarioinput === usuariocorreto && senhainput === senhacorreta) {
+        alert("Login efetuado com sucesso! Bem-vindo.");
         logado = true;
         break; 
-     }
+    }
 
-     if (tentativa < maxtentativas) {
-    alert(`dados incorretos! você ainda tem ${maxtentativas - tentativa} tentativa(s). `);
+    if (tentativa < maxtentativas) {
+        alert(`Dados incorretos! Você ainda tem ${maxtentativas - tentativa} tentativa(s).`);
     }
 }
 
 if (!logado) {
-    alert("número máximo de tentativas excedidos! sua conta foi bloqueada por segurança (e pela nossa também).");
+    alert("Número máximo de tentativas excedido! Sua conta foi bloqueada por segurança.");
 }
 </script>
-    
+
 </body>
 </html>
